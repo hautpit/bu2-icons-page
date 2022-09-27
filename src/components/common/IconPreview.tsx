@@ -1,4 +1,5 @@
 import { message } from "bu2-ui";
+import React from "react";
 
 interface Props {
   name: string;
