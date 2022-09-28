@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bu2-icons-page/static/css/main.9310f45c.css",
-    "main.js": "/bu2-icons-page/static/js/main.0fea1691.js",
+    "main.js": "/bu2-icons-page/static/js/main.bffc2d61.js",
     "static/js/787.136cd444.chunk.js": "/bu2-icons-page/static/js/787.136cd444.chunk.js",
     "index.html": "/bu2-icons-page/index.html",
     "main.9310f45c.css.map": "/bu2-icons-page/static/css/main.9310f45c.css.map",
-    "main.0fea1691.js.map": "/bu2-icons-page/static/js/main.0fea1691.js.map",
+    "main.bffc2d61.js.map": "/bu2-icons-page/static/js/main.bffc2d61.js.map",
     "787.136cd444.chunk.js.map": "/bu2-icons-page/static/js/787.136cd444.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9310f45c.css",
-    "static/js/main.0fea1691.js"
+    "static/js/main.bffc2d61.js"
   ]
 }
