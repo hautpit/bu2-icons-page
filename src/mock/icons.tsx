@@ -1982,6 +1982,14 @@ export const iconSections: IconSectionProps[] = [
         name: "BackwardItemOutlined",
         icon: <Icon.BackwardItemOutlined />,
       },
+      {
+        name: "ReplyOutlined",
+        icon: <Icon.ReplyOutlined />,
+      },
+      {
+        name: "ForwardOutlined",
+        icon: <Icon.ForwardOutlined />,
+      },
     ],
   },
   {

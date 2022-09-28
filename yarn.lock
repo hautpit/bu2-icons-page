@@ -3412,10 +3412,15 @@ bser@2.1.1:
   dependencies:
     node-int64 "^0.4.0"
 
-bu2-sax-icons@^1.3.31, bu2-sax-icons@^1.3.34:
+bu2-sax-icons@^1.3.31:
   version "1.3.34"
   resolved "https://registry.yarnpkg.com/bu2-sax-icons/-/bu2-sax-icons-1.3.34.tgz#30dc3376934ba2468eafb3cbd22d18dc423488b4"
   integrity sha512-7ahlTWMcQibe+/FtAyDa98Iw/X7oq2VBqgU8CCUiPnmv3Y/KWPrm4zE27FExpOFqMGpKaaKBxh7ESzCHh0KEug==
+
+bu2-sax-icons@^1.3.35:
+  version "1.3.35"
+  resolved "https://registry.yarnpkg.com/bu2-sax-icons/-/bu2-sax-icons-1.3.35.tgz#d203ff5a58fa5f1de26281b8dc4fbeca978e7ddb"
+  integrity sha512-KjH6irjo6PHX9J43i5s1bH6dX+d/p0jp3XyYTuSEfjxfcnqfLN0SdqNZWz/zheD5tZmxnAubiqhT6DdKH3vx2A==
 
 bu2-ui@^0.3.37:
   version "0.3.37"
