@@ -28,8 +28,8 @@ function App() {
   }, [searchText]);
 
   return (
-    <div className="container">
-      <h2>Sax Icons</h2>
+    <div className="main-container">
+      <h2>Becawork Icons</h2>
       <div>
         <Input
           placeholder="Search..."

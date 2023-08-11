@@ -2828,8 +2828,8 @@ export const iconSections: IconSectionProps[] = [
         icon: <Icon.Box2Outlined />,
       },
       {
-        name: "TrushSquareOutlined",
-        icon: <Icon.TrushSquareOutlined />,
+        name: "TrashSquareOutlined",
+        icon: <Icon.TrashSquareOutlined />,
       },
       {
         name: "WifiOutlined",
