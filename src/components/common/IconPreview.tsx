@@ -11,6 +11,17 @@ interface Props {
 const IconPreview = (props: Props) => {
   const { name, icon } = props;
 
+  const onCopySvg = () => {
+    const iconElement = document.querySelector(`#icon-${name}`);
+    if (iconElement) {
+      const iconSvg = iconElement.querySelector(".bu2-icon");
+      if (iconSvg) {
+        navigator.clipboard.writeText(iconSvg.innerHTML);
+        message.success("Đã copy svg icon");
+      }
+    }
+  };
+
   return (
     <div className="icon-preview">
       <div className="icon" id={"icon-" + name}>
@@ -28,8 +39,7 @@ const IconPreview = (props: Props) => {
         <CodeOutlined
           className="icon-btn"
           onClick={() => {
-            // navigator.clipboard.writeText(`${console.log(icon)}`);
-            const icon = message.success("Đã copy svg icon");
+            onCopySvg();
           }}
         />
       </div>
