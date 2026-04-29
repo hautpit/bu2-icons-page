@@ -1,20 +1,23 @@
-import React from "react";
-import { CodeOutlined, TextBlockOutlined } from "bu2-sax-icons";
-import { message } from "bu2-ui";
-import reactNodeToString from "react-node-to-string";
+import React, { useMemo } from "react";
+import { CodeOutlined, TextBlockOutlined } from "beca-icons";
+import { message } from "beca-ui";
 
 interface Props {
-  name: string;
+  outlinedName: string;
+  boldName?: string;
   icon: React.ReactNode;
+  boldIcon?: React.ReactNode;
+  variant: "outlined" | "bold";
+  color?: string;
 }
 
 const IconPreview = (props: Props) => {
-  const { name, icon } = props;
+  const { outlinedName, boldName, icon, boldIcon, variant, color } = props;
 
   const onCopySvg = () => {
-    const iconElement = document.querySelector(`#icon-${name}`);
+    const iconElement = document.querySelector(`#icon-${outlinedName}`);
     if (iconElement) {
-      const iconSvg = iconElement.querySelector(".bu2-icon");
+      const iconSvg = iconElement.querySelector(".beca-icon");
       if (iconSvg) {
         navigator.clipboard.writeText(iconSvg.innerHTML);
         message.success("Đã copy svg icon");
@@ -22,17 +25,25 @@ const IconPreview = (props: Props) => {
     }
   };
 
-  return (
-    <div className="icon-preview">
-      <div className="icon" id={"icon-" + name}>
-        {icon}
+  const isValid = useMemo(() => {
+    return variant === "bold" ? boldName && boldIcon : outlinedName && icon;
+  }, [variant, boldName, boldIcon, outlinedName, icon]);
+
+  return isValid ? (
+    <div className="icon-preview" style={{ color: color }}>
+      <div className="icon" id={"icon-" + outlinedName}>
+        {variant === "bold" ? boldIcon : icon}
       </div>
-      <div className="name">{name}</div>
+      <div className="name">
+        <div>{variant === "bold" ? boldName : outlinedName}</div>
+      </div>
       <div className="actions">
         <TextBlockOutlined
           className="icon-btn"
           onClick={() => {
-            navigator.clipboard.writeText(`${name}`);
+            navigator.clipboard.writeText(
+              `${variant === "bold" ? boldName : outlinedName}`,
+            );
             message.success("Đã copy tên icon");
           }}
         />
@@ -44,6 +55,8 @@ const IconPreview = (props: Props) => {
         />
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 
